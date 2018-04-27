@@ -1,0 +1,22 @@
+\:to escape
+.:Any Character except New Line
+\d:Digit(0-9)
+\D:Not a digit(0-9)
+\w:Word Character(a-z,A-Z,0-9,_)
+\W:Not Word Character
+\s:Whitespace(space,tab,newline)
+\S:Not Whitespace(space,tab,newline)
+\b:Word Boundary
+\B:Not a Word Boundary
+^:Beginning of a String
+$:End of a String
+[]:Matches Characters in brackets
+[^ ]:Matches Characters NOT in bracket
+|:Either Or
+():Group(e.g. M(r|s|rs)\.?:matches Mr.,Ms.,Mrs.,Mr,Ms,Mrs)
+*:0 or More
++:1 or More
+?:0 or one
+{n}:exact number(e.g. n=3)
+{3,4}:Range of Numbers(min,max)
+
