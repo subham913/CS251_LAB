@@ -1,0 +1,29 @@
+#!/bin/bash
+strings=0
+comments=0
+
+function traverse() {
+for f in "$1"/*
+do
+	if [ ! -d "$f" ] ;
+		then
+			if [ ${f: -2} == ".c" ]
+			then
+				a=`./q1.awk $f`;
+				a=( $a );
+				(( strings+=a[1] ));
+				(( comments+=a[0] ));
+			fi	
+	else
+		traverse "$f"
+	fi	
+done	
+}
+
+traverse "$1"
+echo $comments" "$strings
+
+
+
+
+ 	
